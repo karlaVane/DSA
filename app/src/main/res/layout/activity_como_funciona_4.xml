@@ -4,16 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ComoFunciona_3">
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="335dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="15dp"
-        android:text="Se envía automáticamente la información."
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+    tools:context=".ComoFunciona_4">
 
     <Button
         android:id="@+id/button4"
@@ -39,17 +30,6 @@
         app:backgroundTint="#5B1111"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="22dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:srcCompat="@drawable/engranaje" />
 
     <TextView
         android:id="@+id/textView7"
@@ -86,10 +66,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="14dp"
-        android:text="GPS:"
+        android:layout_marginTop="20dp"
+        android:text="Foto frontal:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView11"
@@ -98,7 +78,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
-        android:text="AUDIO:"
+        android:text="Foto trasera:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
@@ -109,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:srcCompat="@drawable/gps" />
+        app:srcCompat="@drawable/foto_frontal" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -118,6 +98,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:srcCompat="@drawable/audio" />
+        app:srcCompat="@drawable/foto_trasera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
