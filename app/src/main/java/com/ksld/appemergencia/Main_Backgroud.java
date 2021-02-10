@@ -23,7 +23,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.UUID;
 
 public class Main_Backgroud extends AppCompatActivity {
@@ -37,6 +40,7 @@ public class Main_Backgroud extends AppCompatActivity {
     private Button btOpen, btnKill, btnEnviar;
     private MediaRecorder recorder;
     private MediaPlayer player;
+    private String image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,11 +139,12 @@ public class Main_Backgroud extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(fileName!="" && captureImage != null){
-                    Intent i = new Intent();
-                    i.putExtra("BitmapImg", captureImage);
+                if(fileName!= null && image != null){
+                    Intent i = new Intent(Main_Backgroud.this, ConexionWhats.class);
+                    i.putExtra("Image", image);
                     i.putExtra("Audio", fileName);
                     mensaje("Todo Correcto");
+                    startActivity(i);
                 }else{
                     mensaje("Primero Grabe un Audio y tome una foto");
                 }
@@ -161,7 +166,7 @@ public class Main_Backgroud extends AppCompatActivity {
             captureImage = (Bitmap) data.getExtras().get("data"); //Variable que guarda la imagen
 
             // BITARRAY
-            byte[] bitarray=getImageByte(captureImage);
+            image=getImageByte(captureImage);
 
 
             //ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -172,13 +177,27 @@ public class Main_Backgroud extends AppCompatActivity {
     }
 
     //For encoding toString
-    public byte[] getImageByte(Bitmap bmp){
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    public String getImageByte(Bitmap bmp){
+       /* ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.PNG, 100, baos);
         byte[] imageBytes = baos.toByteArray();
         //String encodedImage = android.util.Base64.encodeToString(imageBytes, Base64.DEFAULT);
-        //return encodedImage;
-        return imageBytes;
+        //return encodedImage;*/
+        File outputDir = getApplicationContext().getCacheDir();
+        File imageFile = new File(outputDir, "img.jpg");
+
+        OutputStream os;
+        try {
+            os = new FileOutputStream(imageFile);
+            bmp.compress(Bitmap.CompressFormat.JPEG, 100, os);
+            os.flush();
+            os.close();
+        } catch (Exception e) {
+            Log.e(getApplicationContext().getClass().getSimpleName(), "Error writing file", e);
+        }
+
+        return imageFile.getAbsolutePath();
+        //return imageBytes;
     }
 
 
