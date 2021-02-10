@@ -3,15 +3,26 @@ package com.ksld.appemergencia;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
 public class menu extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        //Servicio FOREGROUD //////////////
+        Intent i = new Intent(this, VolumenService.class);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            startForegroundService(i);
+        }else{
+            //Si no soporta ejecuto como servicio normal
+            startService(i);
+        }
     }
     public void ac_funcionalidad(View vista){
         Intent activity_inicio= new Intent(this,funcionalidad.class);

@@ -39,21 +39,15 @@ public class Main_Backgroud extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__backgroud);
+        /*
         //Servicio FOREGROUD
         Intent i = new Intent(this, VolumenService.class);
-        //Service con BroadcastReceiver y Media.Volumen
-        //https://stackoverflow.com/questions/21086480/how-can-i-launch-an-android-app-on-upon-pressing-the-volume-up-or-volume-down-bu
-        ///Servicios (Backgroud)
-        ///https://developer.android.com/reference/android/app/Service
-        //Foregroud
-        //https://developer.android.com/guide/components/foreground-services
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             startForegroundService(i);
         }else{
             //Si no soporta ejecuto como servicio normal
             startService(i);
-        }
-
+        }*/
         //ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
         if (ContextCompat.checkSelfPermission(Main_Backgroud.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions( Main_Backgroud.this, new String[]{

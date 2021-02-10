@@ -11,41 +11,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Recording"
-        android:id="@+id/activity_main_record"/>
+        android:id="@+id/activity_main_record"
+        android:layout_gravity="center"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Stop Recording"
-        android:id="@+id/activity_main_stop"/>
+        android:id="@+id/activity_main_stop"
+        android:layout_gravity="center"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play Recording"
-        android:id="@+id/activity_main_play"/>
+        android:id="@+id/activity_main_play"
+        android:layout_gravity="center"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Stop Playing"
-        android:id="@+id/activity_main_stop_playing"/>
+        android:id="@+id/activity_main_stop_playing"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/btn_open"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:text="camara" />
+        android:text="camara"
+        android:layout_gravity="center"/>
     <Button
         android:id="@+id/btn_enviar"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:text="Terminar el Backgroud" />
+        android:text="Terminar el Backgroud"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/btnKill"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:text="Terminar el Backgroud" />
+        android:text="Terminar el Backgroud"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
