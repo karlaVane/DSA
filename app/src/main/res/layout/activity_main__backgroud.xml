@@ -42,17 +42,17 @@
         android:text="camara"
         android:layout_gravity="center"/>
     <Button
-        android:id="@+id/btn_enviar"
+        android:id="@+id/btnKill"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:text="Terminar el Backgroud"
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/btnKill"
+        android:id="@+id/btn_enviar"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:text="Terminar el Backgroud"
+        android:text="Enviar"
         android:layout_gravity="center"/>
 
 </LinearLayout>

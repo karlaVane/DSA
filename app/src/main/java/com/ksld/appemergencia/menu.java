@@ -18,15 +18,6 @@ public class menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
-        //Servicio FOREGROUD //////////////
-        Intent i = new Intent(this, VolumenService.class);
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            startForegroundService(i);
-        }else{
-            //Si no soporta ejecuto como servicio normal
-            startService(i);
-        }
         if (ContextCompat.checkSelfPermission(menu.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions( menu.this, new String[]{
                     Manifest.permission.CAMERA,
