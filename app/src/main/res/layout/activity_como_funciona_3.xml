@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ComoFunciona_3">
 
+
     <TextView
         android:id="@+id/textView8"
         android:layout_width="335dp"
