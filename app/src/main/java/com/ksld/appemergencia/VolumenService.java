@@ -81,7 +81,7 @@ public class VolumenService extends Service {
         registerReceiver(broadcastReceiver, filter);
         ///Creo un Notification Manager
         //NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        Intent resultIntent = new Intent(VolumenService.this, Main_Backgroud.class);
+        Intent resultIntent = new Intent(VolumenService.this, menu.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(///Creo un pending itenm
                 getApplicationContext(),
                 0,
@@ -122,7 +122,7 @@ public class VolumenService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        miToast("Servidor Iniciado");
+        miToast("D-S-A");
         //Aca se crea un intent filter para filtrar con el .addAction("lo q we want escuchar en el broadcast ")
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         filter.addAction("android.media.VOLUME_CHANGED_ACTION");

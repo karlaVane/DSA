@@ -29,7 +29,7 @@ public class notificationService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         createNChannel();
         String mensaje = intent.getStringExtra("msg");
-        Intent mainIntent = new Intent(this, Main_Backgroud.class);
+        Intent mainIntent = new Intent(this, menu.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mainIntent, 0);
         Notification notification = new NotificationCompat.Builder(this, "Canal1")
                 .setContentTitle("HELP")

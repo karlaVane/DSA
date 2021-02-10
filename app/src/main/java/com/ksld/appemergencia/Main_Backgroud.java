@@ -62,7 +62,6 @@ public class Main_Backgroud extends AppCompatActivity {
         btOpen = (Button)findViewById(R.id.btn_open);
         btnKill = (Button)findViewById(R.id.btnKill);
         btnEnviar = (Button)findViewById(R.id.btn_enviar);
-
         playRecordingButton.setVisibility(View.GONE);
         stopPlayingButton.setVisibility(View.GONE);
 
@@ -137,7 +136,7 @@ public class Main_Backgroud extends AppCompatActivity {
                     Intent i = new Intent();
                     i.putExtra("BitmapImg", captureImage);
                     i.putExtra("Audio", fileName);
-
+                    mensaje("Todo Correcto");
                 }else{
                     mensaje("Primero Grabe un Audio y tome una foto");
                 }
