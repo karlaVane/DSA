@@ -55,20 +55,16 @@ public class Main_Backgroud extends AppCompatActivity {
                     Manifest.permission.RECORD_AUDIO
             },100);
         }*/
+        startRecordingButton = (Button)findViewById(R.id.activity_main_record);
+        stopRecordingButton = (Button)findViewById(R.id.activity_main_stop);
+        playRecordingButton = (Button)findViewById(R.id.activity_main_play);
+        stopPlayingButton = (Button)findViewById(R.id.activity_main_stop_playing);
+        btOpen = (Button)findViewById(R.id.btn_open);
+        btnKill = (Button)findViewById(R.id.btnKill);
+        btnEnviar = (Button)findViewById(R.id.btn_enviar);
 
-        setContentView(R.layout.activity_main);
-
-        startRecordingButton = findViewById(R.id.activity_main_record);
-        stopRecordingButton = findViewById(R.id.activity_main_stop);
-        playRecordingButton = findViewById(R.id.activity_main_play);
-        stopPlayingButton = findViewById(R.id.activity_main_stop_playing);
-        btOpen = findViewById(R.id.btn_open);
-        btnKill = findViewById(R.id.btnKill);
-        btnEnviar = findViewById(R.id.btn_enviar);
-
-        playRecordingButton.setVisibility(View.INVISIBLE);
-        stopPlayingButton.setVisibility(View.INVISIBLE);
-
+        /*playRecordingButton.setVisibility(View.INVISIBLE);
+        stopPlayingButton.setVisibility(View.INVISIBLE);*/
         startRecordingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
