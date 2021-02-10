@@ -159,7 +159,6 @@ public class MyWhatsService extends IntentService {
             }
         }catch(Exception e){
             sendBroadcastMessage("Algo fue mal");
-            System.out.println("grrr!!");
         }
     }
 

@@ -29,6 +29,7 @@
     <string name="lblContactos">Contactos seleccionados:</string>
     <string name="ActivarNotificaciones">Activar notificaciones: </string>
     <string name="btnMenu">MENÚ</string>
+    <string name="btnGuardar">GUARDAR</string>
     <string name="title_activity_como_funciona_3">ComoFunciona_3</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

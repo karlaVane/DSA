@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -20,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Servicio FOREGROUD //////////////
+        Intent i = new Intent(this, VolumenService.class);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            startForegroundService(i);
+        }else{
+            //Si no soporta ejecuto como servicio normal
+            startService(i);
+        }
         conectar();
         Cursor fila = bd.rawQuery("select * from usuario",null);
 

@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppEmergencia">
+
+        <activity android:name=".Main_Backgroud"></activity>
+
         <activity android:name=".ComoFunciona_4"></activity>
+
         <activity
             android:name=".ComoFunciona_3"
             android:label="@string/title_activity_como_funciona_3"
@@ -42,6 +46,12 @@
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
         </service>
+        <service android:name=".RecorderService" />
+        <service android:name=".PlayerService" />
+        <service android:name=".VolumenService"
+            android:foregroundServiceType="mediaPlayback|mediaProjection"/>
+        <service android:name=".notificationService"/>
+
 
         <activity android:name=".MainActivity">
             <intent-filter>
