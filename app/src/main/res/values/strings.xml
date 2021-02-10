@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DSA</string>
+    <string name="titConfig">Configuración</string>
+    <string name="msj">Mensaje</string>
+    <string name="numero">Número</string>
+    <string name="enviar">Enviar</string>
+    <string name="btnSeleccionar">Seleccionar contacto</string>
+    <string name="cant">Cantidad msj</string>
+    <string name="btnwhatsapp">ENVIAR POR WHATSAPP</string>
+
+    <!--ACTIVITY REGISTRARSE-->
+    <string name="titulo">DISCRET SECURITY APP</string>
+    <string name="nombre">Nombre</string>
+    <string name="email">Correo electrónico</string>
+    <string name="pass">Contraseña</string>
+    <string name="pass2">Confirmar contraseña</string>
+    <string name="btnRegistrarse">Registrarse</string>
+
+    <!-- ACTIVITY MENU -->
+    <string name="menu">Discret Security App</string>
+    <string name="btnfunciona">¿Cómo funciona?</string>
+    <string name="btnConfig">Configuración</string>
+    <string name="btnSalir">Salir</string>
+
+    <!-- ACTIVITY COMO FUNCIONA -->
+
+    <!-- ACTIVITY CONFIG -->
+    <string name="btnSeleccionarContactos">Contactos de emergencia</string>
+    <string name="lblContactos">Contactos seleccionados:</string>
+    <string name="ActivarNotificaciones">Activar notificaciones: </string>
+    <string name="btnMenu">MENÚ</string>
+</resources>
