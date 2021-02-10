@@ -14,7 +14,7 @@ public class menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
     }
     public void ac_funcionalidad(View vista){
-        Intent activity_inicio= new Intent(this,funcionalidad.class);
+        Intent activity_inicio= new Intent(this, ComoFunciona_1.class);
         startActivity(activity_inicio);
     }
     public void ac_configuracion(View vista){

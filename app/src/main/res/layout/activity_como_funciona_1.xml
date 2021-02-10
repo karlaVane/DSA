@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="siguiente"
     tools:context=".ComoFunciona_1">
 
     <TextView
@@ -75,6 +76,7 @@
         android:layout_marginLeft="92dp"
         android:layout_marginBottom="64dp"
         android:background="#B82121"
+        android:onClick="menu"
         android:text="Menú"
         app:backgroundTint="#5B1111"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,6 +89,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="64dp"
+        android:onClick="siguiente"
         android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
