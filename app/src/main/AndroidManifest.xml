@@ -15,11 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppEmergencia">
-<<<<<<< HEAD
+
         <activity android:name=".Main_Backgroud"></activity>
-=======
+
         <activity android:name=".ComoFunciona_4"></activity>
->>>>>>> c7b1cac6fb0053b6d0923081931f15cfde295f18
+
         <activity
             android:name=".ComoFunciona_3"
             android:label="@string/title_activity_como_funciona_3"
