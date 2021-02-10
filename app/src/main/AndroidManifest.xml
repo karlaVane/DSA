@@ -15,11 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppEmergencia">
-
-        <activity android:name=".ComoFunciona_1"></activity>
-        <activity android:name=".configuracion"></activity>
+        <activity android:name=".ComoFunciona_2"></activity>
+        <activity android:name=".ComoFunciona_1" />
+        <activity android:name=".configuracion" />
         <activity android:name=".funcionalidad" />
-
         <activity android:name=".menu" />
         <activity android:name=".ConexionWhats" />
 
