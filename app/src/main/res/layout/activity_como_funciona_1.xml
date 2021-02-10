@@ -18,14 +18,12 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-<<<<<<< HEAD
+
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,9 +34,6 @@
 
     <TextView
         android:id="@+id/listaContactos"
-=======
-        android:id="@+id/textView4"
->>>>>>> d658f89555610d54c1ae1742b0e2d98dc85aec75
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -57,7 +52,6 @@
         android:layout_marginTop="13dp"
         android:text="Seleccionar tus contactos de emergencia"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
@@ -70,9 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listaContactos"
         app:srcCompat="@drawable/engranaje" />
-=======
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
->>>>>>> d658f89555610d54c1ae1742b0e2d98dc85aec75
 
     <ImageView
         android:id="@+id/imageView3"
@@ -89,8 +81,9 @@
         android:id="@+id/imageView4"
         android:layout_width="225dp"
         android:layout_height="51dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="240dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/foto2" />
