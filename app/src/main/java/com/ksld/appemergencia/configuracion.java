@@ -3,11 +3,16 @@ package com.ksld.appemergencia;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -22,15 +27,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class configuracion extends AppCompatActivity {
+    public AdminSQLite admin;
+    public SQLiteDatabase bd;
     private static final int CONTACT_PICKER_REQUEST=202;
-    TextView listaContactos;
+    TextView listaC;
     List<ContactResult> results = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion);
-        listaContactos = findViewById(R.id.listaContactos);
+        listaC = findViewById(R.id.listaContactos);
 
         Dexter.withActivity(this)
                 .withPermissions(Manifest.permission.SEND_SMS,
@@ -43,7 +50,20 @@ public class configuracion extends AppCompatActivity {
                     public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
                     }
                 }).check();
+
+        conectar();
+        Cursor fila = bd.rawQuery("select * from listaContactos",null);
+        String hola="";
+        if (fila.moveToFirst()){
+            //fila.moveToFirst();
+            do{
+                hola += "\n"+fila.getString(1);
+            }
+            while(fila.moveToNext());
+            listaC.setText(hola);
+        }
     }
+
     public void Selec_contactos(View vista){
         new MultiContactPicker.Builder(configuracion.this) //Activity/fragment context
                 .hideScrollbar(false) //Optional - default: false
@@ -71,15 +91,28 @@ public class configuracion extends AppCompatActivity {
                 for (int j=0;j<results.size();j++){
                     if (j!=0){
                         names.append(", ").append(results.get(j).getDisplayName());
-                        lista += "\n"+results.get(j).getDisplayName()+" - "+ results.get(j).getPhoneNumbers().get(0).getNumber();
+                        lista += "\n"+results.get(j).getDisplayName(); //results.get(j).getPhoneNumbers().get(0).getNumber();
                     }
                 }
                 //listaContactos.setText(names);
-                listaContactos.setText(lista);
+                listaC.setText(lista);
             }else if(resultCode==RESULT_CANCELED){
                 System.out.println("se cerró");
             }
         }
+    }
+
+    public void guardar (View vista){
+        conectar();
+        bd.execSQL("DELETE FROM listaContactos");
+        ContentValues reg = new ContentValues();
+        for (int i=0;i<results.size();i++){
+            reg.put("numero",results.get(i).getPhoneNumbers().get(0).getNumber());
+            reg.put("nombre",results.get(i).getDisplayName());
+            bd.insert("listaContactos",null,reg);
+        }
+        bd.close();
+        Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
     }
 
     public void regresar_menu(View vista){
@@ -87,6 +120,10 @@ public class configuracion extends AppCompatActivity {
     }
     public void salir(View vista){
         moveTaskToBack(true);
+    }
+    public void conectar(){
+        admin=new AdminSQLite(this,"DSA",null,1);
+        bd=admin.getWritableDatabase();
     }
 
 }
