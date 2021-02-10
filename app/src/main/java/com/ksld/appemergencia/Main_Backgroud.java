@@ -63,14 +63,15 @@ public class Main_Backgroud extends AppCompatActivity {
         btnKill = (Button)findViewById(R.id.btnKill);
         btnEnviar = (Button)findViewById(R.id.btn_enviar);
 
-        playRecordingButton.setVisibility(View.INVISIBLE);
-        stopPlayingButton.setVisibility(View.INVISIBLE);
+        playRecordingButton.setVisibility(View.GONE);
+        stopPlayingButton.setVisibility(View.GONE);
 
         startRecordingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startRecording();
                 playRecordingButton.setVisibility(View.VISIBLE);
+                stopPlayingButton.setVisibility(View.VISIBLE);
             }
         });
 
@@ -79,7 +80,6 @@ public class Main_Backgroud extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 stopRecording();
-                stopPlayingButton.setVisibility(View.VISIBLE);
             }
         });
 

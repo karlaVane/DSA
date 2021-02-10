@@ -81,7 +81,7 @@ public class VolumenService extends Service {
         registerReceiver(broadcastReceiver, filter);
         ///Creo un Notification Manager
         //NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        Intent resultIntent = new Intent(VolumenService.this, MainActivity.class);
+        Intent resultIntent = new Intent(VolumenService.this, Main_Backgroud.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(///Creo un pending itenm
                 getApplicationContext(),
                 0,
