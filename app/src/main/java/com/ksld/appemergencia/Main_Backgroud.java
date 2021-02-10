@@ -49,24 +49,25 @@ public class Main_Backgroud extends AppCompatActivity {
             startService(i);
         }*/
         //ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
-        if (ContextCompat.checkSelfPermission(Main_Backgroud.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+        /*if (ContextCompat.checkSelfPermission(Main_Backgroud.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions( Main_Backgroud.this, new String[]{
                     Manifest.permission.CAMERA,
                     Manifest.permission.RECORD_AUDIO
             },100);
-        }
+        }*/
 
         setContentView(R.layout.activity_main);
 
         startRecordingButton = findViewById(R.id.activity_main_record);
         stopRecordingButton = findViewById(R.id.activity_main_stop);
         playRecordingButton = findViewById(R.id.activity_main_play);
-        playRecordingButton.setVisibility(View.INVISIBLE);
         stopPlayingButton = findViewById(R.id.activity_main_stop_playing);
-        stopPlayingButton.setVisibility(View.INVISIBLE);
         btOpen = findViewById(R.id.btn_open);
         btnKill = findViewById(R.id.btnKill);
         btnEnviar = findViewById(R.id.btn_enviar);
+
+        playRecordingButton.setVisibility(View.INVISIBLE);
+        stopPlayingButton.setVisibility(View.INVISIBLE);
 
         startRecordingButton.setOnClickListener(new View.OnClickListener() {
             @Override
