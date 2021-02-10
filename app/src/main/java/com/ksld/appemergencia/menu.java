@@ -38,5 +38,4 @@ public class menu extends AppCompatActivity {
         moveTaskToBack(true);
     }
 
-
 }

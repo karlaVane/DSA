@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.UUID;
 
@@ -151,6 +152,10 @@ public class Main_Backgroud extends AppCompatActivity {
         if (requestCode == 100) {
             // Get Capture Image
             captureImage = (Bitmap) data.getExtras().get("data"); //Variable que guarda la imagen
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            captureImage.compress(Bitmap.CompressFormat.JPEG,100, stream);
+            byte[] byteArray = stream.toByteArray();
+            //https://stackoverflow.com/questions/20329090/how-to-convert-a-bitmap-to-a-jpeg-file-in-android/20329141
         }
     }
 
