@@ -67,12 +67,15 @@ public class configuracion extends AppCompatActivity {
             if(resultCode == RESULT_OK){
                 results=MultiContactPicker.obtainResult(data);
                 StringBuilder names= new StringBuilder(results.get(0).getDisplayName());
+                String lista=names.toString()+" - "+results.get(0).getPhoneNumbers().get(0).getNumber();
                 for (int j=0;j<results.size();j++){
                     if (j!=0){
                         names.append(", ").append(results.get(j).getDisplayName());
+                        lista += "\n"+results.get(j).getDisplayName()+" - "+ results.get(j).getPhoneNumbers().get(0).getNumber();
                     }
                 }
-                listaContactos.setText(names);
+                //listaContactos.setText(names);
+                listaContactos.setText(lista);
             }else if(resultCode==RESULT_CANCELED){
                 System.out.println("se cerró");
             }
