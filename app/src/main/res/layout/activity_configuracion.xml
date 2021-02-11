@@ -38,6 +38,7 @@
         android:layout_width="279dp"
         android:layout_height="145dp"
         android:layout_marginTop="20dp"
+        android:background="#F8F3F3"
         android:textColor="#070707"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,30 +49,31 @@
         android:id="@+id/btnMenu"
         android:layout_width="125dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:layout_marginBottom="136dp"
         android:onClick="guardar"
         android:text="@string/btnGuardar"
         app:backgroundTint="#8BC34A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tema4"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintTop_toBottomOf="@+id/tema"
+        app:layout_constraintVertical_bias="0.963" />
 
     <Button
         android:id="@+id/btnSalirConfig"
         android:layout_width="125dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="140dp"
         android:onClick="regresar_menu"
         android:text="@string/btnMenu"
         app:backgroundTint="#1D2A75"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnMenu"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tema4"
-        app:layout_constraintVertical_bias="0.861" />
+        app:layout_constraintTop_toBottomOf="@+id/tema"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -98,55 +100,4 @@
         app:layout_constraintTop_toBottomOf="@+id/listaContactos"
         tools:layout_editor_absoluteX="53dp" />
 
-    <Button
-        android:id="@+id/tema1"
-        android:layout_width="130dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="12dp"
-        android:onClick="obscuro"
-        android:text="@string/tema1"
-        app:backgroundTint="#1E1C1C"
-        app:layout_constraintEnd_toStartOf="@+id/tema2"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tema" />
-
-    <Button
-        android:id="@+id/tema2"
-        android:layout_width="130dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:onClick="primavera"
-        android:text="@string/tema2"
-        app:backgroundTint="#C6AA42"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tema" />
-
-    <Button
-        android:id="@+id/tema3"
-        android:layout_width="130dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:onClick="invierno"
-        android:text="@string/tema3"
-        app:backgroundTint="#3F51B5"
-        app:layout_constraintEnd_toStartOf="@+id/tema4"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tema1" />
-
-    <Button
-        android:id="@+id/tema4"
-        android:layout_width="130dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:onClick="verano"
-        android:text="@string/tema4"
-        app:backgroundTint="#8F3D37"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tema2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
