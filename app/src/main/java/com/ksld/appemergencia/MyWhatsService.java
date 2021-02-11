@@ -142,16 +142,15 @@ public class MyWhatsService extends IntentService {
                         Intent whatsappIntent= new Intent(Intent.ACTION_VIEW);
                         whatsappIntent.setPackage("com.whatsapp");
                         whatsappIntent.setData(Uri.parse(url));
-                        System.out.println("hasta aqui vale");
+                        //System.out.println("hasta aqui vale");
                         whatsappIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         if(whatsappIntent.resolveActivity(packageManager)!=null){
-                            System.out.println("ashhh");
                             getApplicationContext().startActivity(whatsappIntent);
-                            System.out.println("ashhhx2ss");
+                            //System.out.println("Vale");
                             Thread.sleep(5000);
                             sendBroadcastMessage("Result: "+number);
                         }else{
-                            System.out.println("noa valeeeeee");
+                            System.out.println("ERROR");
                             sendBroadcastMessage("Result: falló");
                         }
                     }

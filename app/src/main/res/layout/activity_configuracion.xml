@@ -35,26 +35,14 @@
 
     <TextView
         android:id="@+id/listaContactos"
-        android:layout_width="283dp"
-        android:layout_height="173dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="279dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="20dp"
         android:textColor="#070707"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contactos" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="313dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/ActivarNotificaciones"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaContactos" />
 
     <Button
         android:id="@+id/btnMenu"
@@ -67,22 +55,23 @@
         app:backgroundTint="#8BC34A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintTop_toBottomOf="@+id/tema4"
+        app:layout_constraintVertical_bias="0.322" />
 
     <Button
         android:id="@+id/btnSalirConfig"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="60dp"
         android:onClick="regresar_menu"
         android:text="@string/btnMenu"
         app:backgroundTint="#1D2A75"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnMenu"
-        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintTop_toBottomOf="@+id/tema4"
+        app:layout_constraintVertical_bias="0.861" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -96,4 +85,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_azul" />
+
+    <TextView
+        android:id="@+id/tema"
+        android:layout_width="294dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/tema"
+        android:textColor="#050505"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/listaContactos"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <Button
+        android:id="@+id/tema1"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:onClick="obscuro"
+        android:text="@string/tema1"
+        app:backgroundTint="#1E1C1C"
+        app:layout_constraintEnd_toStartOf="@+id/tema2"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tema" />
+
+    <Button
+        android:id="@+id/tema2"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:onClick="primavera"
+        android:text="@string/tema2"
+        app:backgroundTint="#C6AA42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tema" />
+
+    <Button
+        android:id="@+id/tema3"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:onClick="invierno"
+        android:text="@string/tema3"
+        app:backgroundTint="#3F51B5"
+        app:layout_constraintEnd_toStartOf="@+id/tema4"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tema1" />
+
+    <Button
+        android:id="@+id/tema4"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:onClick="verano"
+        android:text="@string/tema4"
+        app:backgroundTint="#8F3D37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tema2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

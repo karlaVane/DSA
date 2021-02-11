@@ -1,5 +1,6 @@
 package com.ksld.appemergencia;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
@@ -8,9 +9,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +29,7 @@ import com.wafflecopter.multicontactpicker.MultiContactPicker;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.SplittableRandom;
 
 public class configuracion extends AppCompatActivity {
     public AdminSQLite admin;
@@ -33,6 +38,7 @@ public class configuracion extends AppCompatActivity {
     TextView listaC;
     List<ContactResult> results = new ArrayList<>();
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,9 +127,11 @@ public class configuracion extends AppCompatActivity {
     public void salir(View vista){
         moveTaskToBack(true);
     }
+
     public void conectar(){
         admin=new AdminSQLite(this,"DSA",null,1);
         bd=admin.getWritableDatabase();
     }
+
 
 }

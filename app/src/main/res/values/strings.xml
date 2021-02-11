@@ -31,6 +31,12 @@
     <string name="btnMenu">MENÚ</string>
     <string name="btnGuardar">GUARDAR</string>
     <string name="title_activity_como_funciona_3">ComoFunciona_3</string>
+    <string name="tema">Escoger tema para tu aplicación</string>
+    <string name="tema1">TEMA OBSCURO</string>
+    <string name="tema2">TEMA PRIMAVERA</string>
+    <string name="tema3">TEMA INVIERNO</string>
+    <string name="tema4">TEMA VERANO</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
