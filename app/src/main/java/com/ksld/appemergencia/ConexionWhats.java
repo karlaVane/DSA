@@ -25,6 +25,7 @@ import com.wafflecopter.multicontactpicker.ContactResult;
 import com.wafflecopter.multicontactpicker.LimitColumn;
 import com.wafflecopter.multicontactpicker.MultiContactPicker;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,8 +59,21 @@ public class ConexionWhats extends AppCompatActivity {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
+
+        //Consigo la imagen y el audio
+        String audio = getIntent().getStringExtra("Audio");
+        String image = getIntent().getStringExtra("Image");
+        Toast.makeText(ConexionWhats.this, "Audio "+audio, Toast.LENGTH_SHORT).show();
+        Toast.makeText(ConexionWhats.this, "img "+image, Toast.LENGTH_LONG).show();
+        //loads the files
+        File file = new File(image);
+        File file2 = new File(audio);
+
+
         IntentFilter intent = new IntentFilter("my.own.broadcast");
         LocalBroadcastManager.getInstance(this).registerReceiver(myLocalBroadcastReceiver,intent);
+
+
     }
 
     public void contactos(View vista){

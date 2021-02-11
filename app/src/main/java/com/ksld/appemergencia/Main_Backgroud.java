@@ -10,18 +10,23 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.UUID;
 
 public class Main_Backgroud extends AppCompatActivity {
@@ -35,6 +40,7 @@ public class Main_Backgroud extends AppCompatActivity {
     private Button btOpen, btnKill, btnEnviar;
     private MediaRecorder recorder;
     private MediaPlayer player;
+    private String image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,11 +139,12 @@ public class Main_Backgroud extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(fileName!="" && captureImage != null){
-                    Intent i = new Intent();
-                    i.putExtra("BitmapImg", captureImage);
+                if(fileName!= null && image != null){
+                    Intent i = new Intent(Main_Backgroud.this, ConexionWhats.class);
+                    i.putExtra("Image", image);
                     i.putExtra("Audio", fileName);
                     mensaje("Todo Correcto");
+                    startActivity(i);
                 }else{
                     mensaje("Primero Grabe un Audio y tome una foto");
                 }
@@ -145,6 +152,11 @@ public class Main_Backgroud extends AppCompatActivity {
         });
     }
 
+    //***********************************//
+    //***********************************//
+            //Imagen
+    //***********************************//
+    //***********************************//
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -152,13 +164,51 @@ public class Main_Backgroud extends AppCompatActivity {
         if (requestCode == 100) {
             // Get Capture Image
             captureImage = (Bitmap) data.getExtras().get("data"); //Variable que guarda la imagen
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            captureImage.compress(Bitmap.CompressFormat.JPEG,100, stream);
-            byte[] byteArray = stream.toByteArray();
+
+            // BITARRAY
+            image=getImageByte(captureImage);
+
+
+            //ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            //captureImage.compress(Bitmap.CompressFormat.JPEG,100, stream);
+            //byte[] byteArray = stream.toByteArray();
             //https://stackoverflow.com/questions/20329090/how-to-convert-a-bitmap-to-a-jpeg-file-in-android/20329141
         }
     }
 
+    //For encoding toString
+    public String getImageByte(Bitmap bmp){
+       /* ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] imageBytes = baos.toByteArray();
+        //String encodedImage = android.util.Base64.encodeToString(imageBytes, Base64.DEFAULT);
+        //return encodedImage;*/
+        File outputDir = getApplicationContext().getCacheDir();
+        File imageFile = new File(outputDir, "img.jpg");
+
+        OutputStream os;
+        try {
+            os = new FileOutputStream(imageFile);
+            bmp.compress(Bitmap.CompressFormat.JPEG, 100, os);
+            os.flush();
+            os.close();
+        } catch (Exception e) {
+            Log.e(getApplicationContext().getClass().getSimpleName(), "Error writing file", e);
+        }
+
+        return imageFile.getAbsolutePath();
+        //return imageBytes;
+    }
+
+
+
+
+
+    //***********************************//
+    //***********************************//
+    //Imagen
+    //***********************************//
+    //***********************************//
 
 
     @Override
