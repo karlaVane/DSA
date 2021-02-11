@@ -1,6 +1,7 @@
 package com.ksld.appemergencia;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -36,6 +37,15 @@ public class menu extends AppCompatActivity {
 
     public void salir(View vista){
         moveTaskToBack(true);
+    }
+
+
+    public void cambiarColor(View view) {
+        if (AppCompatDelegate.getDefaultNightMode()==1) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
     }
 
 }
