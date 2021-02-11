@@ -39,7 +39,7 @@
         android:background="#B82121"
         android:onClick="menu"
         android:text="Menú"
-        app:backgroundTint="#5B1111"
+        app:backgroundTint="#f44336"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
