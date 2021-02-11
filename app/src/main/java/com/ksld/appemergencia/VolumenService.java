@@ -62,6 +62,7 @@ public class VolumenService extends Service {
                         paso2 = false;
                         Log.d(TAG, "Evento válido");
                         Intent i = new Intent(VolumenService.this, Main_Backgroud.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         VolumenService.this.startActivity(i);
                     }
                     String mensajeGuiaA = "Su Volumen inicial es "+volumeIni+ " su volumen actual es "+miVolumen;

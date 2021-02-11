@@ -244,14 +244,14 @@ public class Main_Backgroud extends AppCompatActivity {
 
         recorder.start();
 
-        startRecorderService();
+        //startRecorderService();
     }
 
     private void stopRecording() {
         if (recorder != null) {
             recorder.release();
             recorder = null;
-            stopRecorderService();
+            //stopRecorderService();
         }
     }
 
@@ -267,7 +267,7 @@ public class Main_Backgroud extends AppCompatActivity {
             });
             player.prepare();
             player.start();
-            startPlayerService();
+            //startPlayerService();
         } catch (IOException e) {
             Log.e(MainActivity.class.getSimpleName() + ":playRecording()", "prepare() failed");
         }
@@ -277,7 +277,7 @@ public class Main_Backgroud extends AppCompatActivity {
         if (player != null) {
             player.release();
             player = null;
-            stopPlayerService();
+            //stopPlayerService();
         }
     }
 
@@ -285,6 +285,7 @@ public class Main_Backgroud extends AppCompatActivity {
         Intent serviceIntent = new Intent(this, RecorderService.class);
         serviceIntent.putExtra("inputExtra", "Recording in progress");
         ContextCompat.startForegroundService(this, serviceIntent);
+
     }
 
     private void stopRecorderService() {
