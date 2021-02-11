@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">DSA</string>
     <string name="titConfig">Configuración</string>
-    <string name="msj">Mensaje</string>
+    <string name="msj">Necesito ayuda</string>
     <string name="numero">Número</string>
     <string name="enviar">Enviar</string>
     <string name="btnSeleccionar">Seleccionar contacto</string>

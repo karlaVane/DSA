@@ -32,24 +32,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
-    <EditText
-        android:id="@+id/pass2"
-        android:layout_width="317dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/pass2"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass" />
-
     <Button
         android:id="@+id/btnregistrarse"
         android:layout_width="144dp"
         android:layout_height="42dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
         android:background="#3F51B5"
@@ -124,9 +111,9 @@
         android:id="@+id/icon_pass2"
         android:layout_width="56dp"
         android:layout_height="45dp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toStartOf="@+id/pass2"
-        app:layout_constraintHorizontal_bias="0.333"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon_pass"
         app:srcCompat="@drawable/key" />
@@ -135,13 +122,26 @@
         android:id="@+id/btnSalir"
         android:layout_width="145dp"
         android:layout_height="42dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="84dp"
         android:background="#F44336"
         android:onClick="salir"
         android:text="@string/btnSalir"
         app:backgroundTint="#F44336"
         app:layout_constraintEnd_toStartOf="@+id/btnregistrarse"
-        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintHorizontal_bias="0.685"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass2" />
+
+    <EditText
+        android:id="@+id/pass2"
+        android:layout_width="314dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:ems="10"
+        android:hint="@string/pass2"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
 </androidx.constraintlayout.widget.ConstraintLayout>

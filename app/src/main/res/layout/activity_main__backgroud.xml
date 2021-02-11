@@ -1,58 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main_Backgroud"
-    android:orientation="vertical">
+    android:background="#0C0C0C"
+    android:orientation="vertical"
+    tools:context=".Main_Backgroud">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Recording"
         android:id="@+id/activity_main_record"
-        android:layout_gravity="center"/>
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Start Recording"
+        app:backgroundTint="#2196F3" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop Recording"
         android:id="@+id/activity_main_stop"
-        android:layout_gravity="center"/>
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Stop Recording"
+        app:backgroundTint="#CDDC39" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Recording"
         android:id="@+id/activity_main_play"
-        android:layout_gravity="center"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Play Recording"
+        app:backgroundTint="#A6B9BC" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop Playing"
         android:id="@+id/activity_main_stop_playing"
-        android:layout_gravity="center"/>
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Stop Playing"
+        app:backgroundTint="#AE2E2E" />
 
     <Button
         android:id="@+id/btn_open"
-        android:layout_width="130dp"
+        android:layout_width="413dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="camara"
-        android:layout_gravity="center"/>
+        app:backgroundTint="#009688" />
+
     <Button
         android:id="@+id/btnKill"
-        android:layout_width="130dp"
+        android:layout_width="421dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Terminar el Backgroud"
-        android:layout_gravity="center"/>
+        app:backgroundTint="#E64B4B" />
 
     <Button
         android:id="@+id/btn_enviar"
-        android:layout_width="130dp"
+        android:layout_width="413dp"
         android:layout_height="wrap_content"
-        android:text="Enviar"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:text="Enviar" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="312dp"
+        app:srcCompat="@drawable/logo_azul" />
+
+    <TextView
+        android:id="@+id/lblDSA"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="#070707"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#F3EBEB"
+        android:textSize="30sp" />
 
 </LinearLayout>

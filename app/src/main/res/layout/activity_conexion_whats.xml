@@ -8,10 +8,13 @@
 
     <TextView
         android:id="@+id/txtConfig"
-        android:layout_width="236dp"
-        android:layout_height="28dp"
+        android:layout_width="396dp"
+        android:layout_height="41dp"
         android:layout_marginTop="28dp"
+        android:gravity="center"
         android:text="@string/titConfig"
+        android:textColor="#070707"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,25 +24,27 @@
         android:id="@+id/InputMsj"
         android:layout_width="309dp"
         android:layout_height="38dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="@string/msj"
+        android:gravity="center"
         android:inputType="textPersonName"
+        android:text="@string/msj"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtConfig" />
 
     <EditText
         android:id="@+id/txtNum"
-        android:layout_width="189dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="274dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/numero"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputMsj" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSeleccionar" />
 
     <Button
         android:id="@+id/btnSeleccionar"
@@ -50,30 +55,31 @@
         android:text="@string/btnSeleccionar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cant" />
+        app:layout_constraintTop_toBottomOf="@+id/InputMsj" />
 
     <Button
         android:id="@+id/btnEnviar"
         android:layout_width="196dp"
         android:layout_height="45dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:onClick="btnsms"
         android:text="@string/enviar"
+        app:backgroundTint="#F44336"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSeleccionar" />
+        app:layout_constraintTop_toBottomOf="@+id/cant" />
 
     <EditText
         android:id="@+id/cant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/cant"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.412"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNum" />
 
@@ -84,8 +90,9 @@
         android:layout_marginTop="28dp"
         android:onClick="btnwhatsapp"
         android:text="@string/btnwhatsapp"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
 
